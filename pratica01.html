@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(39, 38, 68);
+        }
+
+        header {
+            background-color: rgb(221, 73, 73);
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            padding: 5px;
+            box-shadow: 1px 1px 10px black;
+        }
+
+        section#principal {
+            display: flex;
+            flex-direction: column;
+         }
+
+         section#descricao {
+            margin: auto;
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+         }
+
+         .questoes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 160px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: rgb(221, 73, 73);
+            box-shadow: 3px 3px 10px black;
+         } 
+         .questoes > h2 {
+            font-size: 1em;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px black;
+         }
+
+         .resp {
+            width: 90%;
+            height: 30px;
+            border-radius: 5px;
+         }
+
+         .send {
+            margin-top: 10px;
+            padding: 5px;
+            font: bolder 16px arial;
+            color: white;
+            background-color: rgb(39, 38, 68);
+            cursor: pointer;
+         }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Questões</h1>
+    </header>
+    <main>
+        <section id="principal">
+            <section id="descricao">
+                <p>Seja Bem vindo ao jogo "Questões", aqui você testará seu nivel de conhecimento básico, todas as perguntas são discursivas, escreva do mesmo jeito que as palavars cinzas estão digitadas, respeite as letras maiusculas e minusculas e os sinais, se acertar a resposta o quadro ficará verde, leia com atenção e divirta-se!
+                </p>
+            </section>
+            <div id="q1" class="questoes">
+                <h2 id="perg1">Quantos dias tem uma semana e qual o primeiro dia dela?</h2>
+                <input type="text" class="resp" name="resp1" id="resp1" placeholder="Ex: 2/Quarta-feira" autocomplete="off">
+                <input type="button" value="Enviar" id="send1" name="send1" class="send" onclick="enviou1()">
+            </div>
+            <div id="q2" class="questoes">
+                <h2 id="perg2">Se você tem 5 irmãos, quantos filhos tem seu pai?</h2>
+                <input type="text" name="resp2" id="resp2" class="resp" placeholder="Ex: 2" autocomplete="off">
+                <input type="button" name="send2" id="send2" class="send" value="Enviar" onclick="enviou2()">
+            </div>
+
+            <div id="q3" class="questoes">
+                <h2 style="font-size: 15px;" id="perg3">Júlio queimava os pés quando pisava no asfalto quente, por isso resolveu comprar um calçado, quantos calçados Júlio tem agora?</h2>
+                <input type="text" name="resp3" id="resp3" class="resp" placeholder="Ex: 0" autocomplete="off">
+                <input type="button" name="send3" id="send3" class="send" value="Enviar" onclick="enviou3()">
+            </div>
+
+            <div id="q4" class="questoes">
+                <h2 id="perg4">Quantos dias são necessários para a Terra orbitar o sol?</h2>
+                <input type="text" name="resp4" id="resp4" class="resp" placeholder="Ex: 000 dias" autocomplete="off">
+                <input type="button" name="send4" id="send4" class="send" value="Enviar" onclick="enviou4()">
+            </div>
+
+            <div id="q5" class="questoes">
+                <h2 id="perg5">De qual país é a invenção do chuveiro elétrico?</h2>
+                <input type="text" name="resp5" id="resp5" class="resp" placeholder="Ex: País" autocomplete="off">
+                <input type="button" name="send5" id="send5" class="send" value="Enviar" onclick="enviou5()">
+            </div>
+
+            <div id="q6" class="questoes">
+                <h2 id="perg6"> O que a palavra legend significa em português?</h2>
+                <input type="text" name="resp6" id="resp6" class="resp" placeholder="Ex: Palavra" autocomplete="off">
+                <input type="button" name="send6" id="send6" class="send" value="Enviar" onclick="enviou6()">
+            </div>
+
+            <div id="q7" class="questoes">
+                <h2 id="perg7"> Qual foi a segunda capital do Brasil?</h2>
+                <input type="text" name="resp7" id="resp7" class="resp" placeholder="Ex: Mato Grosso" autocomplete="off">
+                <input type="button" name="send7" id="send7" class="send" value="Enviar" onclick="enviou7()">
+            </div>
+
+            <div id="q8" class="questoes">
+                <h2 id="perg8"> Qual o maior osso do corpo humano?</h2>
+                <input type="text" name="resp8" id="resp8" class="resp" placeholder="Ex: Rádio" autocomplete="off">
+                <input type="button" name="send8" id="send8" class="send" value="Enviar" onclick="enviou8()">
+            </div>
+
+            <div id="q9" class="questoes">
+                <h2 id="perg9" style="font-size: 13.5px;"> Quantos graus são necessários para que dois ângulos sejam complementares?</h2>
+                <input type="text" name="resp9" id="resp9" class="resp" placeholder="Ex: 00 graus" autocomplete="off">
+                <input type="button" name="send9" id="send9" class="send" value="Enviar" onclick="enviou9()">
+            </div>
+
+            <div id="q10" class="questoes">
+                <h2 id="perg10"> Qual significado da sigla (ONU)?</h2>
+                <input type="text" name="resp10" id="resp10" class="resp" placeholder="Ex: Oxxxx dxx Nxxxx Uxxxx" autocomplete="off">
+                <input type="button" name="send10" id="send10" class="send" value="Enviar" onclick="enviou10()">
+            </div>
+
+        </section>
+    </main>
+    <script>
+
+        function enviou1() {
+            var r1 = document.querySelector('input#resp1')
+            var r1valor = r1.value
+            var q1 = document.querySelector('div#q1')
+            if (r1valor == '7/Domingo') {
+                q1.style.backgroundColor = 'green' 
+                perg1.innerHTML = 'CERTO'
+            }else {
+                q1.style.backgroundColor = 'red'
+                perg1.innerHTML = 'ERRADO'
+            }
+            resp1.style.display = 'none'
+        }
+      
+        function enviou2() {
+            var r2 = document.querySelector('input#resp2')
+            var r2valor = r2.value
+            var q2 = document.querySelector('div#q2')
+            if (r2valor == '6') {
+                q2.style.backgroundColor = 'green' 
+                perg2.innerHTML = 'CERTO'
+            }else {
+                q2.style.backgroundColor = 'red'
+                perg2.innerHTML = 'ERRADO'
+            }
+            resp2.style.display = 'none'
+        }
+
+        function enviou3() {
+            var r3 = document.querySelector('input#resp3')
+            var r3valor = r3.value
+            var q3 = document.querySelector('div#q3') 
+            if (r3valor == '2') {
+                q3.style.backgroundColor = 'green' 
+                perg3.innerHTML = 'CERTO'
+            }else {
+                q3.style.backgroundColor = 'red'
+                perg3.innerHTML = 'ERRADO'
+            }
+            resp3.style.display = 'none'
+        }
+
+        function enviou4() {
+            var r4 = document.querySelector('input#resp4')
+            var r4valor = r4.value 
+            var q4 = document.querySelector('div#q4')
+            if (r4valor == '365 dias') {
+                q4.style.backgroundColor = 'green'
+                perg4.innerHTML = 'CERTO'
+            }else {
+                q4.style.backgroundColor = 'red'
+                perg4.innerHTML = 'ERRADO'
+            }
+            resp4.style.display = 'none'
+        }
+
+        function enviou5() {
+            var r5 = resp5.value
+            if (r5 == 'Brasil') {
+                q5.style.backgroundColor = 'green'
+                perg5.innerHTML = 'CERTO'
+            }else {
+                q5.style.backgroundColor = 'red'
+                perg5.innerHTML = 'ERRADO'
+            }
+            resp5.style.display = 'none'
+        }
+
+        function enviou6() {
+            var r6 = resp6.value
+            if (r6 == 'Lenda') {
+                q6.style.backgroundColor = 'green'
+                perg6.innerHTML = 'CERTO'
+            }else {
+                q6.style.backgroundColor = 'red'
+                perg6.innerHTML = 'ERRADO'
+            }
+            resp6.style.display = 'none'
+        }
+
+        function enviou7() {
+            var r7 = resp7.value
+            if (r7 == 'Rio de Janeiro') {
+                q7.style.backgroundColor = 'green'
+                perg7.innerHTML = 'CERTO'
+            }else {
+                q7.style.backgroundColor = 'red'
+                perg7.innerHTML = 'ERRADO'
+            }
+            resp7.style.display = 'none'
+        }
+
+        function enviou8() {
+            var r8 = resp8.value
+            if (r8 == 'Fêmur') {
+                q8.style.backgroundColor = 'green'
+                perg8.innerHTML = 'CERTO'
+            }else {
+                q8.style.backgroundColor = 'red'
+                perg8.innerHTML = 'ERRADO'
+            }
+            resp8.style.display = 'none'
+        }
+
+        function enviou9() {
+            var r9 = resp9.value
+            if (r9 == '90 graus') {
+                q9.style.backgroundColor = 'green'
+                perg9.innerHTML = 'CERTO'
+            }else {
+                q9.style.backgroundColor = 'red'
+                perg9.innerHTML = 'ERRADO'
+            }
+            resp9.style.display = 'none'
+        }
+
+        function enviou10() {
+            var r10 = resp10.value
+            if (r10 == 'Organização das Nações Unidas') {
+                q10.style.backgroundColor = 'green'
+                perg10.innerHTML = 'CERTO'
+            }else {
+                q10.style.backgroundColor = 'red'
+                perg10.innerHTML = 'ERRADO'
+            }
+            resp10.style.display = 'none'
+        }
+
+    </script>
+</body>
+</html>
